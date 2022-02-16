@@ -15,7 +15,10 @@ fn main() {
             .read_line(&mut guess)
             .expect("Unable to read user input");
 
-        let guess: u32 = guess.trim().parse().expect("Please enter a number!");
+        let guess: u32 = guess.trim().parse() {
+            Ok(num) => num,
+            Error(_) => continue,
+        };
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too less!"),
