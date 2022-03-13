@@ -1,6 +1,7 @@
 fn main() {
-    // Variables and Mutability
-    variables_and_mutability();
+    // variables_and_mutability();
+    // data_types();
+    functions();
 }
 
 fn variables_and_mutability() {
@@ -22,6 +23,27 @@ fn variables_and_mutability() {
     }
     println!("The value of x is: {}", x);
 
-    let spaces = "   ";
-    let spaces = spaces.len();
+    let _spaces = "   ";
+    let _spaces = _spaces.len();
+}
+
+fn data_types() {
+    let integer: i32 = 10;
+    let floating: f64 = 2.0;
+
+    println!("Integer: {}", integer);
+    println!("Floating: {}", floating);
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (x, y, z) = tup;
+
+    println!("The value is y is: {}", y);
+
+    let arr: [i32; 5] = [1, 2, 3, 4, 5];
+
+    println!("2nd element of the array is: {}", arr[1]);
+}
+
+fn functions() {
+    
 }
